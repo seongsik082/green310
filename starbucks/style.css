@@ -1,14 +1,11 @@
 /* 언어설정 */
-
 @charset 'UTF-8';
 
 /* reset */
-
 * {
   margin: 0;
   padding: 0;
 }
-
 a {
   text-decoration: none;
   color: #333;
@@ -22,12 +19,13 @@ img {
   vertical-align: bottom;
 }
 
-/* 헤더설정 */
+/* header설정 */
+
 header {
   background-color: #f6f5ef;
 }
 header h1 {
-  background-image: url("img/top-logo.png");
+  background-image: url(img/top_logo.png);
   background-repeat: no-repeat;
   width: 130px;
   height: 120px;
@@ -35,197 +33,451 @@ header h1 {
   text-indent: -9999px;
 }
 header .util {
-  position: absolute;
-  display: flex;
-  top: 0;
-  right: 0;
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
 }
 header .util li {
 }
 header .util li a {
-  display: block;
-  padding: 10px;
+    display: block;
+    padding: 10px;
 }
-header .util li a:hover {
-  text-decoration: underline;
-}
+header .util li a:hover {text-decoration: underline;}
 
-.header_inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
+.header_inner {display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        position: relative;}
+
 
 header .gnb {
 }
-header .gnb ul {
-  display: flex;
+header .gnb ul {display: flex;
+
 }
 header .gnb ul li {
-  margin: 0 2px;
+    margin: 0 2px;
 }
 header .gnb ul li a {
-  display: block;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  /* padding: 10px 20px 30px 20px; */
+    display: block;
+    padding-top:10px ;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* padding: 10px 20px 30px 20px */
 }
+header .gnb ul li a:hover {background-color: #333;
+                            color: #00B050;
+                        text-decoration: underline;
+             }
 
-header .gnb ul li a:hover {
-  background-color: #333;
-  color: #00b050;
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-/* hero설정 */
-
+/* hero 설정 */
 .hero {
-  height: 32vw;
-  background-size: cover;
-  background-position: center;
-  background-image: url("img/2023_disney2_top_bg.jpg");
+    height: 32vw;
+    background-size: cover;
+    background-position: center;
+    background-image: url(img/2023_disney2_top_bg.jpg);
 }
 
 /* 드링크포지션 */
-.hero_inner {
-  position: relative;
-  height: 100%;
-}
-.hero_inner > div {
-  position: absolute;
-}
+.hero_inner {position: relative;
+height: 100%;}
+.hero_inner>div{position: absolute;}
 
-.hero_inner > div:nth-child(1) {
-  left: 0;
-  top: 50%;
-  margin-top: -80px;
+.hero_inner>div:nth-child(1) {
+    left: 0;
+    top: 50%;
+    margin-top: -80px;
 }
-.hero_inner > div:nth-child(2) {
-  left: 170px;
-  bottom: 50%;
-  margin-bottom: -120px;
-  border: 2px solid #401b0d;
-  padding: 10px 30px;
-  color: #401b0d;
-  border-radius: 5px;
-  font-size: 14px;
+.hero_inner>div:nth-child(2) {
+    left:150px;
+    bottom: 50%;
+    margin-bottom: -120px;
+    border: 2px solid #401B0D;
+    padding: 10px 30px;
+    color: #401B0D;
+    border-radius: 5px;
+    font-size: 14px;
 }
-.hero_inner > div:nth-child(3) {
-  left: 50%;
-  top: 0;
-  margin-left: -120px;
-  margin-top: -50px;
+.hero_inner>div:nth-child(3) {
+    top: 0;
+    left: 50%;
+    margin-top: 50px;
+    margin-left: -120px;
 }
-.hero_inner > div:nth-child(4) {
-  left: 50%;
-  bottom: 0;
-  margin-left: 300px;
-  margin-bottom: 100px;
-  z-index: 1;
+.hero_inner>div:nth-child(4) {
+    bottom: 0;
+    left: 50%;
+    margin-left: 300px;
+    margin-bottom: 100px;
+    z-index: 1;
 }
-.hero_inner > div:nth-child(5) {
-  left: 50%;
-  top: 0;
-  margin-left: 150px;
-  margin-top: 100px;
-  z-index: 0;
-}
+.hero_inner>div:nth-child(5) {
+   top:0;
+    left: 50%;
+    margin-left: 150px;
+    margin-top: 100px;
+    z-index: 0;
+
+    }
+
+
 
 /* notice 설정 */
 
-.notice {
-  display: flex;
-}
-.notice > div {
-  width: 50%;
-}
-/* notice바로아래 자손자를 선택하고 있는 다이렉트로
-notice001과 notice002만 선택한다. */
-
-.notice > div h2 {
+.notice {display: flex;}
+.notice>div {width: 50%;}
+/* notice 바로 아래자손자를 
+선택하고 있는 다이렉트로 
+notice001과 notice002만 부른다. */
+.notice>div h2 {
   font-weight: normal;
   font-size: 28px;
   width: 40%;
 }
-.notice > div:nth-child(1) h2 {
+.notice>div:nth-child(1) h2 {
   font-weight: normal;
   font-size: 28px;
   color: #fff;
 }
+.notice>div ul{height: 30px;
+position: relative;
+width: 100%;
 
-.notice > div ul {
-  height: 40px;
-  position: relative;
-  width: 100%;
-  background-color: yellow;
-  overflow: hidden;
-}
-.notice > div ul li {
-  background-color: red;
+overflow: hidden;}
+.notice>div ul li {
   margin-bottom: 10px;
-  height: 40px;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  transition: all 0.8s;
+
+position: absolute;
+left: 0;
+top: 100%;
+transition: all 0.8s;}
+.notice>div ul li:nth-child(1){top: 0;}
+
+.notice>div ul li a {color: #fff;
+display: block;
+
 }
-.notice > div ul li:nth-child(1) {
-  top:0%;
-}
-.notice > div ul li a {
-  color: #fff;
-  display: block;
-}
-.notice > div p {
-}
-.notice > div img {
-}
-
-
-/* 테스트 */
-.notice>div ul:hover li {top: 0;}
+.notice>div p {}
+.notice>div img {}
 
 
 
-
+/* 테스트 
+.notice>div ul:hover li {top: 0;}*/
 
 
 /* 상세설정 */
-.notice001 {
-  background-color: #333;
-  display: flex;
-  justify-content: flex-end;
+.notice001 {background-color: #333;
+display: flex;
+justify-content: flex-end;
 }
-.notice002 {
-  background-color: antiquewhite;
-}
+.notice002 {background-color: #f6f5ef;}
 
-.notice > div > div {
+
+.notice>div>div {display: flex;
+                justify-content: space-between;
+                align-items: center;
+              padding: 20px;
+            box-sizing: border-box;}
+
+
+
+/* banner설정 */
+
+.banner {background-color:#1e3932;
+padding: 20px 0;
+color: #fff;}
+.banner_inner {display: flex;
+width: 100%;
+align-items: center;}
+.banner .logo_banner {width: 300px;}
+.banner .logo_banner img {width: 80%;}
+.banner .txtBox {
+width:calc(100% - 300px)}
+
+/* 상세설정 */
+.banner .boxTop {
+  border-bottom: 1px solid #fff;
+  padding: 10px 0;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
+  align-items: flex-end;
 }
 
-/* ################# 미디어쿼리구간 #################*/
+.banner .boxTop .txt p:nth-child(1) {font-size: 20px;
+margin-bottom: 10px;}
+.banner .boxTop .btn {display: flex ;}
+.banner .boxTop .btn p {border: 2px solid #fff;
+padding: 5px 10px;
+font-size: 14px;
+margin-left: 10px;
+border-radius: 5px;
+color: #fff;}
+.banner .boxTop .btn p:nth-child(1){border: none;
+                      background-color: #155c34;}
 
-/* 1290px 이상일때 */
-@media (min-width: 1290px) {
-  .header_inner,
-  .hero_inner {
-    width: 1280px;
-    margin: 0 auto;
+
+
+.banner .boxBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+
+
+/* 프로모션설정 */
+
+.promotion {height: 43vh;
+          background-image: url(img/2023_autumn_promotion_bg.jpg);
+          background-size: cover;
+        background-repeat: no-repeat;
+      display: flex;
+    width: 100%;
+    overflow: hidden;}
+
+.promotion>div {width: 50%;
+            width: 100%; }
+.promotion .imgBox {
+display: flex;
+justify-content: flex-end;
+align-items: center;}
+.promotion .imgBox img {width: 100%;
+                        max-width:500px ;}
+
+.promotion .txtBox {
+                  display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 50px;
+                align-items: flex-start;
+
+             }
+.promotion .txtBox img {width: 100%;
+                      max-width:300px ;
+                     }
+.promotion .txtBox p {border: 2px solid #155c34;
+                padding: 10px 30px;
+              border-radius: 5px;
+            margin-top: 50px;
+          color: #155c34;}
+
+
+/* reserve설정 */
+
+.reserve {height: 400px;
+  background-image: url(img/230811_pc_reserve_bg.jpg);
+  background-size: cover;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: row-reverse;
+width: 100%;
+overflow: hidden;}
+
+.reserve>div {width: 50%;
+    width: 100%; }
+    .reserve .imgBox {
+display: flex;
+justify-content: flex-start;
+padding-left: 150px;
+align-items: center;}
+.reserve .imgBox img {width: 100%;
+                max-width:200px ;}
+
+.reserve .txtBox {
+          display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 50px;
+        align-items: flex-end;
+
+     }
+     .reserve .txtBox img {width: 100%;
+              max-width:300px ;
+             }
+             .reserve .txtBox p {border: 2px solid #155c34;
+        padding: 10px 30px;
+      border-radius: 5px;
+    margin-top: 50px;
+  color: #155c34;}
+
+/* pick설정 */
+
+.pick {height: 800px;
+  background-image: url(img/230921_1_pc_pick_bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: row-reverse;
+width: 100%;
+overflow: hidden;}
+
+.pick>div {width: 50%;
+    width: 100%; }
+    .pick .imgBox {
+display: flex;
+justify-content: flex-start;
+padding-left: 150px;
+align-items: center;}
+.pick .imgBox img {width: 100%;
+                max-width:950px ;}
+
+.pick .txtBox {
+          display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 50px;
+        align-items: flex-end;
+
+     }
+     .pick .txtBox img {width: 100%;
+              max-width:300px ;
+              margin-bottom: 10px;
+             }
+             .pick .txtBox p {border: 2px solid #fff;
+        padding: 10px 30px;
+      border-radius: 5px;
+    margin-top: 50px;
+  color: #fff;}
+
+
+
+/* magazine설정 */
+
+.magazine {height: 400px;
+  background-image: url(img/reserve_bg_pc.png);
+  background-size: contain;
+background-repeat: no-repeat;
+
+width: 100%;
+overflow: hidden;
+background-position: center center;
+position: relative;}
+
+.magazine>div {width: 50%;
+  position: absolute;
+  }
+    .magazine .imgBox {
+     
+      left: 50%;
+      margin-left: 40px;
+display: flex;
+justify-content: flex-start;
+align-items: center;}
+.magazine .imgBox img {width: 100%;
+                max-width:340px ;}
+
+.magazine .txtBox {
+  left: 8%;
+  top: 30%;
+ 
+          display: flex;
+        flex-direction: column;
+        justify-content: center;
+      
+        align-items: flex-end;
+
+     }
+     .magazine .txtBox img {width: 100%;
+              max-width:580px ;
+             }
+             .magazine .txtBox p {border: 2px solid #155c34;
+        padding: 10px 30px;
+      border-radius: 5px;
+    margin-top: 50px;
+  color: #155c34;
+align-self: center;}
+
+
+
+
+/* map설정 */
+
+.map {height: 400px;
+  background-image: url(img/store_bg.jpg);
+  background-size: cover;
+background-repeat: no-repeat;
+display: flex;
+width: 100%;
+overflow: hidden;}
+
+.map>div {width: 50%;
+    height: 100%; }
+.map .imgBox {
+  position: relative;
+}
+.map .imgBox img {width: 100%;
+            
+              position: absolute;}
+.map .imgBox img:nth-child(1) {top: 0;
+  max-width: 360px;
+right: 50%;
+transform: translateX(70%);}
+.map .imgBox img:nth-child(2) {top: 50%;
+max-width: 220px;
+right: 50%;
+transform: translate(150% ,-20%);}            
+
+.map .txtBox {
+          display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 50px;
+        align-items: flex-start;
+
+     }
+.map .txtBox img {width: 100%;
+              max-width:300px ;
+             }
+.map .txtBox p {
+    margin-top: 50px;
+  color: #155c34;}
+  .map .txtBox p:nth-child(1) {font-size: 28px;}
+  .map .txtBox p:nth-child(1) strong {display: block;}
+  .map .txtBox p.more {
+    border: 2px solid #155c34;
+        padding: 10px 30px;
+      border-radius: 5px;
   }
 
-  .notice_inner001 {
-    width: 640px;
-  }
-  .notice_inner002 {
-    width: 640px;
-  }
+
+  footer {background-color: #333;
+      height: 600px;}
+
+
+
+
+
+
+
+
+
+
+/* 미디어쿼리구간 ####################################################### */
+
+
+
+/* 1290px 이상일때  */
+@media(min-width:1290px){
+
+
+
+    .header_inner,.hero_inner,.banner_inner {width: 1280px;
+                margin: 0 auto;}
+
+
+
+.notice_inner001 {
+  width: 640px;
+}
+.notice_inner002 {
+width: 640px;}
+
+
+
 }
