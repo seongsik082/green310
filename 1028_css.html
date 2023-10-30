@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css 기초설명</title>
+  </head>
+  <body>
+    <style>
+      h1 {
+      }
+      ul li {
+      } /*리스트와 서브모두 또는 서브만 부름*/
+      .menu li {
+      }
+      .menu > li {
+      } /*리스트만부름*/
+      .menu > li > ul > li {
+      }
+      .menu > li li {
+      }
+    </style>
+
+    <h1>선택자</h1>
+    <ul class="menu">
+      <li>
+        리스트1
+        <ul>
+          <li>서브1</li>
+          <li>서브2</li>
+        </ul>
+      </li>
+      <li>리스트2</li>
+    </ul>
+
+    <div class="ex1">
+      <p>none</p>
+      <p>block</p>
+      <p><span>inline</span></p>
+      <p>inline-block</p>
+    </div>
+
+    <style>
+      .ex1 {
+        background-color: bisque;
+      }
+      .ex1 p {
+        background-color: #ffff00;
+        padding: 20px;
+        margin-top: 50px;
+      }
+      .ex1 span {
+        padding: 20px;
+        background-color: red;
+        display: inline-block;
+      }
+      .ex1 p:nth-child(1) {
+        display: none;
+      }
+      .ex1 p:nth-child(3) {
+        display: inline-block;
+      }
+      .ex1 p:nth-child(4) {
+        display: inline-block;
+      }
+    </style>
+
+    <div class="ex2">
+      <p>contain</p>
+      <p>cover</p>
+      <p>attachment</p>
+      <p></p>
+      <p></p>
+    </div>
+
+    <style>
+      .ex2 p {
+        height: 300px;
+        background-image: url(img/bakery_003.jpg);
+        background-repeat: no-repeat;
+      }
+      .ex2 p:nth-child(1) {
+        background-size: contain;
+      }
+      .ex2 p:nth-child(2) {
+        background-size: cover;
+      }
+      .ex2 p:nth-child(3) {
+        background-attachment: scroll;
+      }
+    </style>
+
+    <div class="ex3">
+      <p>relative</p>
+      <p>absolute</p>
+      <p>fixed</p>
+    </div>
+
+    <style>
+      .ex3 {
+        background-color: aqua;
+        position: relative;
+      }
+      .ex3 p {
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+      }
+      .ex3 p:nth-child(1) {
+        position: relative;
+        z-index: 5;
+      }
+      .ex3 p:nth-child(2) {
+        position: absolute;
+        left: 100px;
+        top: -100px;
+        background-color: red;
+        z-index: 4;
+      }
+      .ex3 p:nth-child(3) {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+      }
+    </style>
+
+    <div class="ex4">
+      <p>item1</p>
+      <p>item2</p>
+      <p>item3</p>
+      <p>item4</p>
+    </div>
+
+    <style>
+      .ex4 {
+        height: 800px;
+
+        background-color: skyblue;
+      }
+      .ex4 p {
+        border: 2px solid #000;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* 플렉스설정 */
+
+      .ex4 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+      }
+
+      .ex4 p:nth-child(3) {
+        order: -1;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </body>
+</html>
