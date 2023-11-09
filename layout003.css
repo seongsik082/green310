@@ -1,0 +1,291 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+
+/* 박스1설정 */
+.box1 {display: flex;
+height: 100px;
+background-color: #f5e4c3;}
+.box1>div:nth-child(1) {width: 20%;}
+.box1>div:nth-child(2) {width: 80%;}
+.gnb ul {display: flex;
+    width: 100%;
+    height: 100%;
+align-items: center;}
+.gnb li {width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;}
+.logo{ display: flex;
+justify-content: center;
+align-items: center;}
+
+
+/* 박스2 설정 */
+.box2{height: 800px;
+background-color: #163172;}
+.box2>div:nth-child(1) {height: 70%;
+background-color: #ebd5d5;}
+.box2>div:nth-child(2) {height: 30%;}
+.hero {display: flex;
+justify-content: flex-end;}
+.hero>div {width: 50%;}
+
+.box2 .localMenu {display: flex;
+width: 80%;
+margin: 0 auto;
+}
+.localMenu>a{width: 25%;}
+.localMenu>a:nth-child(1) {background-color: #f2f2f2;
+}
+.localMenu>a:nth-child(2) {background-color: #ebd5d5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+.localMenu>a:nth-child(3) {background-color: #ea8a8a;}
+.localMenu>a:nth-child(4) {background-color: #685454;}
+.menu2 img {width: 100%;
+height: 50%;}
+
+
+.hero .txtBox {display: flex;
+    width: 40%;
+    height: 100%;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+
+}
+.hero .txtBox strong {
+    width: 60%;
+    font-size: 36px;
+    line-height: 1.5;
+}
+
+.hero .imgBox img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 박스3설정 */
+.box3 {height: 500px;}
+.box3-1 {width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box3-1 p {text-align: center;}
+
+.box3-2 {width: 80%;
+    height: 70%;
+    display: flex;
+margin: 0 auto;}
+.box3-2>div {width: 50%;}
+.listBox ul {display: flex;
+    width: 100%;
+    height: 100%;
+}
+.listBox a {display: block;
+}
+.listBox li {display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 박스4 설정 */
+.box4 {height: 800px;}
+.box4 h2 {height: 20%;}
+.box4-1 {height: 80%;
+    width: 70%;
+    margin: 0 auto;
+display: flex;
+}
+.box4-1>div {width: 50%;
+height: 100%;}
+.box4-1>div:nth-child(1) ul {display: flex;
+flex-direction: column;
+width: 100%;
+height: 100%;
+}
+.box4-1>div:nth-child(1) ul li {display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    }
+
+.box4-1>div:nth-child(1) ul li img {
+    width: 70px;
+    height: 70px;
+}
+.box4-1>div:nth-child(2) ul li img {
+    width: 100%;
+    height: 100%;
+}
+.box4-1>div:nth-child(2) ul li {
+    position: absolute;
+}
+
+/* 박스5 설정 */
+.box5 {display: flex;
+width: 100%;
+height: 600px;}
+.box5>div:nth-child(1) {width: 45%;
+height: 100%;}
+.box5>div:nth-child(2) {width: 55%;}
+
+.box5-1 .listBox ul {display: flex;
+    flex-direction: column;
+    width: 100%;
+height: 100%;}
+
+.box5-1 .listBox li {display: flex;}
+
+/* 박스6 설정 */
+.box6 {display: flex;}
+.box6>div:nth-child(1) {width: 40%;}
+.box6>div:nth-child(2) {width: 20%;}
+.box6>div:nth-child(3) {width: 40%;}
+
+
+/* 박스7 설정 */
+.box7 {width: 100%;
+height: 1000px;}
+.box7-1 {height: 70%;
+position: relative;}
+.box7-2 {height: 30%;
+    background-color: #333;
+position: relative;}
+.container{width: 100%;
+height: 100%;
+position: relative;
+overflow: hidden;}
+
+.container ul {
+    display: flex;
+    position: absolute;
+    width: 800%;
+    height: 100%;
+    z-index: 1;
+flex-wrap: nowrap;}
+.container li {
+    width: 100%;
+height: 100%;
+}
+.container img {width: 100%;
+    height: 100%;
+    }
+.box7-1 .left {width: 70px;
+    height: 70px;
+    position: absolute;
+margin-left: 10px;
+left: 0;
+top: 50%;
+margin-top: -25px;
+z-index: 10;
+}
+
+.box7-1 .right {width: 70px;
+    height: 70px;
+    position: absolute;
+right: 0;
+top: 50%;
+margin-top: -25px;
+z-index: 10;
+}
+.fa-chevron-left {position: absolute;
+    font-size: 45px;
+    left: 25%;
+    top: 10%;}
+.fa-chevron-right {position: absolute;
+font-size: 45px;
+right: 37%;
+top: 10%;}
+.fa-circle-thin {position: absolute;
+font-size: 60px;}
+.trailer{width: 90%;
+    height: 90%;
+    margin: auto auto;
+    position: relative;
+    overflow: hidden;
+    
+    }
+    .trailer ul {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        margin-top: -100px;
+        width: 150%;
+        height: 100%;
+        z-index: 1;
+    flex-wrap: nowrap;}
+    .trailer li {
+        width: 100%;
+    height: 100%;
+    }
+
+    .trailer img {width: 90%;
+    height: 90%;}
+   
+/* 박스8설정 */
+.box8 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+.box8>div{width: 50%;}
+.box8-1 {
+    width: 100%;
+    height: 100%;
+}
+.box8-1 img {width: 100%;
+height: 100%;}
+
+.box8-2 {
+    width: 85%;
+    height: 80%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.box8-2 p,h2 {
+    width: 80%;
+    text-align: left;
+    
+}
+.box8-2 h2{
+    padding: 30px 0;
+    font-size: 45px;
+    box-sizing: border-box;
+}
+
+
+/* 박스9설정 */
