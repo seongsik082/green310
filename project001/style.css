@@ -1,0 +1,484 @@
+/* 언어설정 */
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+/* reset */
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none;
+    color: #000;}
+img {border: none;
+    }
+
+/*############## 박스1 설정 ##############*/
+.box1 {width: 100%;
+height: 170px;
+display: flex;
+flex-wrap: wrap;}
+
+.box1-1 {width: 10%;
+height: 60%;}
+
+.box1-1 img {width: 100%;
+height: 100%;}
+
+
+.box1-2 {width: 50%;
+height: 60%;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+padding-left: 25px;
+box-sizing: border-box;
+font-size: 36px;
+color: #FE7E03;
+font-family: 'Gugi', sans-serif;
+}
+.box1-3 {width: 40%;
+    height: 60%;}
+.box1-4 {width: 100%;
+       height: 27%;}
+
+    .box1-3 .util {
+        width: 100%;
+        height: 100%;
+    }
+.box1-4 .gnb {
+    width: 100%;
+    height: 100%;
+    background-color: #FFDF82;  
+}
+    .util ul {display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    .gnb ul {
+        width: 80%;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+    justify-content: space-around;
+align-items: center;
+}
+.gnb li {padding: 5px 10px;
+    box-sizing: border-box;
+border-radius: 10px;}
+.gnb li:hover {
+    background-color: #aaa;
+}
+
+
+/*############## 박스2 설정 ##############*/
+.box2 {width: 100%;
+    height: 800px;
+    overflow: hidden;
+    }
+.box2-1 {
+    width: 100%;
+    height: 87%;
+}
+.box2-1 .hero {
+    display: flex;
+    width: 270%;
+    height: 98%;
+   
+}
+.hero>img {width: 90%;
+margin: 0 auto;}
+.box2 .form {width: 100%;
+height: 10%;
+border-top: 2px solid #FE7E03;
+border-bottom: 2px solid #FE7E03;
+padding-bottom: 40px;
+box-sizing: border-box;
+position: relative;
+}
+.form .info {
+    position: absolute;
+    top: 6%;
+    right: 43%;
+    font-size: 18px;
+}
+.form-inner {
+    width: 80%;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+}
+.form-inner>div {display: flex;
+align-items: center;}
+.form1>div {width: 300px;
+height: 40px;
+background-color: #ddd;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+padding-left: 20px;
+box-sizing: border-box;
+}
+.form1 .acts {
+    background-color: #ddd;
+    font-size: 30px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.form2>div {width: 300px;
+    height: 40px;
+    background-color: #ddd;
+margin-left: 30px;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+padding-left: 20px;
+box-sizing: border-box;
+}
+.form2 .date {
+    background-color: #ddd;
+    font-size: 30px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.form3 {width: 100px;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 80px;
+}
+.form3 .top {width: 100%;
+height: 20px;
+text-align: center;
+font-size: 20px;
+font-weight: bold;
+padding-top: 5px;
+box-sizing: border-box;}
+.form3 i,.num {width: 33.3333%;
+height: 30px;
+padding-top: 10px;
+box-sizing: border-box;}
+.form3 i {
+    font-size: 30px;
+    text-align: center;
+}
+.form3 .num {text-align: center;
+font-size: 20px;}
+
+
+.form4 {width: 100px;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+.form4 .top {width: 100%;
+height: 20px;
+text-align: center;
+font-size: 20px;
+font-weight: bold;
+padding-top: 5px;
+box-sizing: border-box;}
+.form4 i,.num {width: 33.3333%;
+height: 30px;
+padding-top: 10px;
+box-sizing: border-box;}
+.form4 i {
+    font-size: 30px;
+    text-align: center;
+}
+.form4 .num {text-align: center;
+font-size: 20px;}
+
+
+.form5 {width: 100px;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+.form5 .top {width: 100%;
+height: 20px;
+text-align: center;
+font-size: 20px;
+font-weight: bold;
+padding-top: 5px;
+box-sizing: border-box;}
+.form5 i,.num {width: 33.3333%;
+height: 30px;
+padding-top: 10px;
+box-sizing: border-box;}
+.form5 i {
+    font-size: 30px;
+    text-align: center;
+}
+.form5 .num {text-align: center;
+font-size: 20px;}
+.form-inner i{color: #f99f4c;}
+.form-inner .fa-search {color: #000;}
+.form-inner i,.form1,.form2 {cursor: pointer;}
+
+.form-inner .btn {
+    margin: 20px 0 0 70px;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7AB551;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* banner 설정 */
+.banner {width: 100%;
+height: 220px;
+background-image: url(img/banner.jpg);
+background-size: cover;
+background-position: center;
+position: relative;
+}
+.banner p {
+    width: 150px;
+    height: 50px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    color: #fff;
+background-color: #222;
+text-align: center;
+font-size: 20px;
+position: absolute;
+right: 5%;
+bottom: 10%;
+opacity: 0.8;
+cursor: pointer;
+}
+.banner p:hover {
+    background-color: #111;
+    opacity: 1;
+}
+
+
+
+/*############## 박스3 설정 ##############*/
+.box3 {width: 100%;
+height: 400px;}
+.box3-1 {width: 80%;
+margin: 0 auto;}
+.box3-1 ul {display: flex;}
+.box3-1 li {
+    width: 120px;
+    background-color: #ffbd7f;
+padding: 10px 20px;
+border-radius: 10px 10px 0 0;
+box-sizing: border-box;
+text-align: center;
+}
+.box3-1 li:nth-child(2) {margin-left: 5px;}
+.box3-1 li:nth-child(3) {margin-left: 5px;}
+.box3-1 li:hover {border-bottom: 2px solid #000;}
+
+.box3-2 {background-color: #ffbd7f;
+width: 80%;
+margin: 0 auto;
+height: 88%;}
+
+
+.box3-2 .preview {display: none;}
+.box3-2 .event {display: none;}
+
+
+
+
+/*############## 박스4 설정 ##############*/
+.box4 {background-color: #FAA931;
+width: 100%;
+height: 1000px;}
+.box4-1 {width: 100%;
+height: 10%;}
+.box4-2 {width: 90%;
+    margin: 0 auto;
+height: 85%;
+padding-top: 1%;
+background-color: #fff;
+position: relative;
+overflow: hidden; }
+.container {
+    width: 100%;
+    height: 75%;
+    
+}
+.container ul {
+    width: 240%;
+    height: 100%;
+    display: flex;
+}
+.container li {
+    width: 80%;
+    height: 100%;
+}
+.container img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 슬라이드용 */
+/* .container img:nth-child(1) {left: 0;}
+.container img:nth-child(2) {left: 80%;}
+.container img:nth-child(3) {left: 160%;} */
+
+.trailer {
+    width: 100%;
+    height: 20%;
+    margin-top: 1.5%;
+}
+.trailer ul {
+    display: flex;
+    width: 150%;
+    height: 100%;
+}
+.trailer li {
+    width: 10%;
+    height: 90%;
+    margin-left: 20px;
+}
+.trailer>ul>li:nth-child(1) {
+    background-image: url(img/train1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 0;
+}
+.trailer>ul>li:nth-child(2) {
+    background-image: url(img/train2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.trailer>ul>li:nth-child(3) {
+    background-image: url(img/train3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.trailer>ul>li:nth-child(4) {
+    background-image: url(img/train4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.trailer>ul>li:nth-child(5) {
+    background-image: url(img/train5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.trailer>ul>li:nth-child(6) {
+    background-image: url(img/train6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.trailer>ul>li:nth-child(7) {
+    background-image: url(img/train7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.trailer>ul>li:nth-child(8) {
+    background-image: url(img/train8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.trailer>ul>li:nth-child(9) {
+    background-image: url(img/train9.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.trailer>ul>li:nth-child(10) {
+    background-image: url(img/train10.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.trailer>ul>li:nth-child(11) {
+    background-image: url(img/train11.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.trailer img {
+    width: 100%;
+    height: 100%;
+}
+
+.box4-2 .left {background-color: #000;
+color: #fff;
+position: absolute;
+border-radius: 50%;
+opacity: 0.8;
+top:32%;
+left: 1%;
+cursor: pointer;}
+.box4-2 .left:hover {opacity: 1;}
+.box4-2 .right:hover {opacity: 1;}
+.box4-2 .right {background-color: #000;
+    color: #fff;
+position: absolute;
+border-radius: 50%;
+opacity: 0.8;
+top: 32%;
+right: 1%;
+cursor: pointer;}
+.box4-2 i {font-size: 50px;
+padding: 10px 15px;
+box-sizing: border-box;
+
+}
+
+/* 박스5 설정 */
+.box5 {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+}
+.box5>div {width: 50%;
+height: 90%;
+margin-top: 50px;
+box-sizing: border-box;}
+
+.box5-1 {
+    border-top: 7px solid #f99f4c;
+    border-right: 4px solid #f99f4c;
+    border-bottom: 7px solid #f99f4c;
+}
+.box5-2 {border-top: 7px solid #f99f4c;
+    border-left: 4px solid #f99f4c;
+    border-bottom: 7px solid #f99f4c;
+}
+.box5-1-inner {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 90%;
+    border-radius: 17%;
+    background-color: #FE7E03;
+}
+.box5-2-inner {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 90%;
+    border-radius: 17%;
+    background-color: #FE7E03;
+}
+
+
+
+
+
+
