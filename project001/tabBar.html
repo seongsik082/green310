@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭바만들기_네이버샘플</title>
+    <style>
+        * {margin: 0;
+        padding: 0;}
+        ul,ol {
+            list-style: none;
+        }
+        a {text-decoration: none;
+        color: #000;}
+
+        .tabBar {border: 1px solid #ccc;
+            margin: 20px;
+            border-radius: 5px;
+            padding: 10px;
+    }
+    .titleBox {
+    margin-bottom: 10px;}
+    .titleBox ul {display: flex;}
+    .titleBox li {margin-right: 5px;
+    cursor: pointer;
+color: #777;}
+    .titleBox li.on {color: #000;}
+    .titleBox li:hover {text-decoration: underline;}
+    .titleBox li:nth-child(2):before {display: inline-block;
+    content: '\00b7';
+margin: 0 5px;}
+    .titleBox li:nth-child(3):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.titleBox li:nth-child(4):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.titleBox li:nth-child(5):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+
+    .listBox{
+        background-color: aqua;
+    position: relative;
+width: 100%;
+height: 150px;}
+    .listBox>div {position: absolute;
+    left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+display: none;
+}
+.news>ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+    flex-wrap: wrap;}
+    .news>ul>li {width:16.6666% ;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                height: 25%;
+            position: relative;}
+.news {background-color: bisque;}
+.cast {background-color: aquamarine;}
+.enter {background-color: aliceblue;}
+.sport {background-color: blue;}
+.econo {background-color: yellow;}
+
+
+/* 탭바2 설정 */
+.tabBar2 {border: 1px solid #ccc;
+            margin: 20px;
+            border-radius: 5px;
+            padding: 10px;
+    }
+    .titleBox2 {
+    margin-bottom: 10px;}
+    .titleBox2 ul {display: flex;}
+    .titleBox2 li {margin-right: 5px;
+    cursor: pointer;
+color: #777;}
+    .titleBox2 li.on {color: #000;}
+    .titleBox2 li:hover {text-decoration: underline;}
+    .titleBox2 li:nth-child(2):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.titleBox2 li:nth-child(3):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.titleBox2 li:nth-child(4):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.listBox2{
+        background-color: aqua;
+    position: relative;
+width: 100%;
+height: 150px;}
+    .listBox2>div {position: absolute;
+    left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+display: none;
+}
+.shop {background-color: red;}
+.mans {background-color: aqua;}
+.deal {background-color: azure;}
+.live {background-color: yellow;}
+
+
+/* 탭바3설정 */
+.tabBar3 {border: 1px solid #ccc;
+            margin: 20px;
+            border-radius: 5px;
+            padding: 10px;
+    }
+    .titleBox3 {
+    margin-bottom: 10px;}
+    .titleBox3 ul {display: flex;}
+    .titleBox3 li {margin-right: 5px;
+    cursor: pointer;
+color: #777;}
+    .titleBox3 li.on {color: #000;}
+    .titleBox3 li:hover {text-decoration: underline;}
+    .titleBox3 li:nth-child(2):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.titleBox3 li:nth-child(3):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.titleBox3 li:nth-child(4):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.titleBox3 li:nth-child(5):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.titleBox3 li:nth-child(6):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.titleBox3 li:nth-child(7):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.titleBox3 li:nth-child(8):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.titleBox3 li:nth-child(9):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.titleBox3 li:nth-child(10):before {display: inline-block;
+    content: '\002f';
+margin: 0 5px;}
+.listBox3{
+        background-color: aqua;
+    position: relative;
+width: 100%;
+height: 150px;}
+    .listBox3>div {position: absolute;
+    left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+display: none;
+}
+.shop {background-color: red;}
+.mans {background-color: aqua;}
+.deal {background-color: azure;}
+.live {background-color: yellow;}
+
+
+    </style>
+
+<!-- 제이쿼리연결 -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    $(function(){
+        // titleBox 의 li 의 순번찾기
+        $('.titleBox li').click(function(){
+            //클릭한 나 자신의 순번을 변수로 지정하기
+            var i = $(this).index();
+            //콘솔에 확인하기
+            console.log(i);
+            //찾아낸 순번을 listBox안의 div의 순서에 맞게 보이기
+            $('.listBox div').css({'display':'none'});
+            $('.listBox div').eq(i).css({'display':'block'});
+            $('.titleBox li').removeClass('on');
+            //클릭한 나자신에게 클래스 on값 더하기
+            $(this).addClass('on')
+
+        })
+
+        //쇼핑쪽 실행
+        $('.titleBox2 li').click(function(){
+            var j = $(this).index();
+            console.log(j);
+            $('.listBox2 div').css({'display':'none'});
+            $('.listBox2 div').eq(j).css({'display':'block'});
+            $('.titleBox2 li').removeClass('on');
+            $(this).addClass('on');
+
+        })
+
+
+        //추천 구독쪽 실행
+
+
+
+    })
+
+
+</script>
+
+
+</head>
+<body>
+    <div class="tabBar">
+        <div class="titleBox">
+            <ul>
+                <li class="on">뉴스스탠드</li>
+                <li>언론사편집</li>
+                <li>엔터</li>
+                <li>스포츠</li>
+                <li>경제</li>
+            </ul>
+        </div>
+        <div class="listBox">
+            <div class="news" style="display: block;">
+                <ul>
+                    <li>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>기사보기</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>기사보기</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>기사보기</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                        <div class="hover">
+                            <ul>
+                                <li>구독</li>
+                                <li>구독</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cast"></div>
+            <div class="enter"></div>
+            <div class="sport"></div>
+            <div class="econo"></div>
+        </div>
+    </div>
+    <div class="tabBar2">
+        <div class="titleBox2">
+            <ul>
+                <li class="on">쇼핑</li>
+                <li>맨즈</li>
+                <li>원쁠딜</li>
+                <li>쇼핑라이브</li>
+            </ul>
+        </div>
+        <div class="listBox2">
+            <div class="shop" style="display: block;">
+                <ul>
+                    <li><a href="#">쇼핑내용1</a></li>
+                    <li><a href="#">쇼핑내용2</a></li>
+                    <li><a href="#">쇼핑내용3</a></li>
+                    <li><a href="#">쇼핑내용4</a></li>
+                    <li><a href="#">쇼핑내용5</a></li>
+                    <li><a href="#">쇼핑내용6</a></li>
+                </ul>
+            </div>
+            <div class="mans"></div>
+            <div class="deal"></div>
+            <div class="live"></div>
+        </div>
+    </div>
+    <div class="tabBar3">
+        <div class="titleBox3">
+            <ul>
+                <li class="on">추천 &#8226; 구독</li>
+                <li>자동차</li>
+                <li>웹툰</li>
+                <li>패션뷰티</li>
+                <li>레시피</li>
+                <li>리빙</li>
+                <li>책방</li>
+                <li>지식+</li>
+                <li>건강</li>
+                <li>게임</li>
+            </ul>
+        </div>
+        <div class="listBox2">
+            <div class="good" style="display: block;">
+                <ul>
+                    <li><a href="#">추천구독내용1</a></li>
+                    <li><a href="#">추천구독내용2</a></li>
+                    <li><a href="#">추천구독내용3</a></li>
+                    <li><a href="#">추천구독내용4</a></li>
+                    <li><a href="#">추천구독내용5</a></li>
+                    <li><a href="#">추천구독내용6</a></li>
+                </ul>
+            </div>
+            <div class="cars"></div>
+            <div class="toon"></div>
+            <div class="beauty"></div>
+            <div class="rep"></div>
+            <div class="living"></div>
+            <div class="book"></div>
+            <div class="know"></div>
+            <div class="heal"></div>
+            <div class="game"></div>
+        </div>
+    </div>
+</body>
+</html>

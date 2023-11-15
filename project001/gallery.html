@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery만들기</title>
+
+
+    <style>
+        *{margin: 0;
+        padding: 0;}
+        ul {list-style: none;}
+        img{vertical-align: bottom;}
+
+        .wrap{width: 800px;
+        margin: 20px auto;
+    background-color: blanchedalmond;}
+    .container {width: 700px;
+    height: 600px;
+margin: 0 auto;
+background-color: aqua;
+position: relative;}
+.container p {width: 100%;
+height: 100%;
+position: absolute;
+left: 0;
+top: 0;}
+.container p img {width: 100%;
+height: auto;}
+
+.trailer {width: 700px;
+    margin: 0 auto;
+height: 100px;
+background-color: blue;
+overflow: hidden;
+}
+
+.trailer ul {display: flex;
+    
+    width: 1600px;}
+.trailer li {background-color: brown;
+    border: 1px solid red;
+box-sizing: border-box;
+width: 200px;
+height: 100px;}
+.trailer li img {width: 100%;
+    height: auto;
+
+}
+
+
+    </style>
+
+
+<!-- 제이쿼리연결 -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<!-- 제이쿼리설정 -->
+<script>
+    $(function(){
+
+        //트레일러에 li를 클릭했을때
+        //컨테이너에 p가 보여라
+
+        //트레일러의 li를 클릭했을때 본인의 순번을 찾아라
+        //컨테이너의 p가 li가 클릭한 순번에 맞게 보여라.
+
+
+        $('trailer li').click(function(){
+            var i = $(this).index();
+            $('.container p').css({'display':'none'})
+            $('.container p').eq(i).css({'display':'block'})
+
+        })
+
+
+
+
+
+    })
+</script>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <p><img src="https://picsum.photos/id/140/700/600" alt=""></p>
+            <p><img src="https://picsum.photos/id/160/700/600" alt=""></p>
+            <p><img src="https://picsum.photos/id/170/700/600" alt=""></p>
+            <p><img src="https://picsum.photos/id/180/700/600" alt=""></p>
+            <p><img src="https://picsum.photos/id/190/700/600" alt=""></p>
+            <p><img src="https://picsum.photos/id/200/700/600" alt=""></p>
+            <p><img src="https://picsum.photos/id/210/700/600" alt=""></p>
+            <p><img src="https://picsum.photos/id/222/700/600" alt=""></p>
+        </div>
+        <div class="trailer">
+            <ul>
+                <li><img src="https://picsum.photos/id/140/700/600" alt=""></li>
+                <li><img src="https://picsum.photos/id/160/700/600" alt=""></li>
+                <li><img src="https://picsum.photos/id/170/700/600" alt=""></li>
+                <li><img src="https://picsum.photos/id/180/700/600" alt=""></li>
+                <li><img src="https://picsum.photos/id/190/700/600" alt=""></li>
+                <li><img src="https://picsum.photos/id/200/700/600" alt=""></li>
+                <li><img src="https://picsum.photos/id/210/700/600" alt=""></li>
+                <li><img src="https://picsum.photos/id/220/700/600" alt=""></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -10,11 +10,37 @@
     <!-- 외부스타일시트연결 -->
     <link rel="stylesheet" href="style.css">
     <!-- 외부스크립트연결 -->
-    <script src="js/js.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <!-- 폰트어썸 CDN -->
     <script src="https://kit.fontawesome.com/2dd79075cb.js" crossorigin="anonymous"></script>
+
+
+    <!-- 제이쿼리 설정 -->
+    <script>
+        $(function(){
+            // titleBox 의 li 의 순번찾기
+            $('.titleBox li').click(function(){
+            //클릭한 나 자신의 순번을 변수로 지정하기
+            var i = $(this).index();
+            //콘솔에 확인하기
+            console.log(i);
+            //찾아낸 순번을 listBox안의 div의 순서에 맞게 보이기
+            $('.listBox ul').css({'display':'none'});
+            $('.listBox ul').eq(i).css({'display':'flex'});
+            $('.titleBox li').removeClass('on');
+            //클릭한 나자신에게 클래스 on값 더하기
+            $(this).addClass('on')
+            })
+
+        })
+
+    </script>
+
+
+
 </head>
 <body>
+    <div class="link">Quick<br>Link</div>
     <header class="box1" >
         <div class="box1-1">
             <img src="img/main_Logo.png" alt="">
@@ -23,9 +49,14 @@
         <div class="box1-3">
             <nav class="util">
                 <ul>
-                    <li><a href="#">util1</a></li>
-                    <li><a href="#">util2</a></li>
-                    <li><a href="#">util3</a></li>
+                    <li>
+                        <a href="#">
+                            <div>Language</div>
+                            <p class="down"><i class="fa fa-chevron-down" aria-hidden="true"></i></p>
+                        </a>
+                    </li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -91,39 +122,60 @@
             <p>자세히 보기</p>
         </div>
         <section class="box3 notiBox">
-            <div class="box3-1">
+            <div class="box3-1 titleBox">
                 <ul>
                     <li>공지사항</li>
                     <li>관람안내</li>
                     <li>이벤트</li>
                 </ul>
             </div>
-            <div class="box3-2">
-            
-                <ul class="notice">
-                    <li>공지사항내용</li>
-                    <li>공지사항내용</li>
-                    <li>공지사항내용</li>
-                    <li>공지사항내용</li>
+            <div class="box3-2 listBox">
+                <ul class="notice" style="display: flex;">
+                        <li>
+                            <div><a href="#">공지사항 내용</a></div>
+                            <div><a href="#">날짜</a></div>
+                        </li>
+                        <li><div><a href="#">공지사항 내용</a></div>
+                            <div><a href="#">날짜</a></div></li>
+                        <li><div><a href="#">공지사항 내용</a></div>
+                            <div><a href="#">날짜</a></div></li>
+                        <li><div><a href="#">공지사항 내용</a></div>
+                            <div><a href="#">날짜</a></div></li>
+                            <li><div><a href="#">공지사항 내용</a></div>
+                                <div><a href="#">날짜</a></div></li>
                 </ul>
                 <ul class="preview">
-                    <li>관람안내내용</li>
-                    <li>관람안내내용</li>
-                    <li>관람안내내용</li>
-                    <li>관람안내내용</li>
+                    <li>
+                        <div><a href="#">관람안내 내용</a></div>
+                        <div><a href="#">날짜</a></div>
+                    </li>
+                    <li><div><a href="#">관람안내 내용</a></div>
+                        <div><a href="#">날짜</a></div></li>
+                    <li><div><a href="#">관람안내 내용</a></div>
+                        <div><a href="#">날짜</a></div></li>
+                    <li><div><a href="#">관람안내 내용</a></div>
+                        <div><a href="#">날짜</a></div></li>
+                        <li><div><a href="#">관람안내 내용</a></div>
+                            <div><a href="#">날짜</a></div></li>
                 </ul>
                 <ul class="event">
-                    <li>이벤트내용</li>
-                    <li>이벤트내용</li>
-                    <li>이벤트내용</li>
-                    <li>이벤트내용</li>
+                    <li>
+                        <div><a href="#">이벤트 내용</a></div>
+                        <div><a href="#">날짜</a></div>
+                    </li>
+                    <li><div><a href="#">이벤트 내용</a></div>
+                        <div><a href="#">날짜</a></div></li>
+                    <li><div><a href="#">이벤트 내용</a></div>
+                        <div><a href="#">날짜</a></div></li>
+                    <li><div><a href="#">이벤트 내용</a></div>
+                        <div><a href="#">날짜</a></div></li>
+                        <li><div><a href="#">이벤트 내용</a></div>
+                            <div><a href="#">날짜</a></div></li>
                 </ul>
-
-
-
-              
             </div>
         </section>
+
+
         <section class="box4 gallery">
             <div class="box4-1">
                 <h2>감귤갤러리</h2>
@@ -160,13 +212,15 @@
         <section class="box5">
             <div class="box5-1">
                 <div class="box5-1-inner">
+                    <div><h2>감귤이야기</h2></div>
+                    <div><p class="plus">+</p></div>
                     <div>왼편</div>
                     <div>오른편</div>
-                    <p class="plus">+</p>
                 </div>
             </div>
             <div class="box5-2">
                 <div class="box5-2-inner">
+                    <h2>감귤이야기</h2>
                     <div>위</div>
                     <div>아래</div>
                     <p class="plus">+</p>
