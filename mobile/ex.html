@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideAnimation</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+            <ul>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap2">
+        <div class="box2">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+            <ul>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <style>
+        * {margin: 0;
+        padding: 0;}
+        ul {list-style: none;}
+        .wrap {width: 1000px;
+        height: 200px;
+        position: relative;
+    background-color: red;
+    overflow: hidden;
+margin: 20px auto;}
+        .wrap .box {
+            display: flex;
+        }
+        .wrap ul {display: flex;
+        position: absolute;}
+        .wrap ul:nth-child(1) {left: 0;
+            animation: ani2 10s linear infinite;}
+        .wrap ul:nth-child(2) {left: 100%;
+            animation: ani1 10s linear infinite;
+        }
+        .wrap li {width: 200px;
+            height: 200px;
+        border: 2px solid #000;
+        box-sizing: border-box;
+    }
+    .wrap:hover ul {animation-play-state: paused;}
+    .wrap li:hover {background-color: antiquewhite;
+    cursor: pointer;}
+    @keyframes ani1 {
+        0% {left: 100%;}
+        50% {left: 0%;}
+        100% {left: -100%;}
+    }
+
+    @keyframes ani2 {
+        0% {left: 0;}
+        50% {left: -100%;}
+        50.00001% {left: 100%;}
+        100% {left: 0%;}
+    }
+
+    .wrap2 {width: 1000px;
+        height: 200px;
+        position: relative;
+    background-color: red;
+    position: relative;
+    overflow: hidden;
+margin: 20px auto;}
+
+
+.wrap2 .box2 {display: flex;}
+.wrap2 .box2 ul {display: flex;
+    flex-direction: row-reverse;
+position: absolute;}
+.wrap2 .box2 ul:nth-child(1) {right: 0;
+animation: ani4 10s linear infinite;}
+.wrap2 .box2 ul:nth-child(2) {right: 100%;
+animation: ani3 10s linear infinite;}
+.wrap2 .box2 li {width: 200px;
+    height: 200px;
+border: 2px solid #000;
+box-sizing: border-box;}
+
+.wrap2:hover ul {animation-play-state: paused;}
+
+    @keyframes ani3 {
+        0% {right: 100%;}
+        50% {right: 0%;}
+        100% {right: -100%;}
+    }@keyframes ani4 {
+        0% {right: 0%;}
+        50% {right: -100%;}
+        50.00001% {right: 100%;}
+        100% {right: 0%;}
+    }
+
+    </style>
+</body>
+</html>
